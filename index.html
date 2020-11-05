@@ -1,116 +1,72 @@
-<!DOCTYPE html>
 <html>
-    
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    
+
     <body>
-        <div class="container">
-            <div aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Profile</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">About</a>
-                    </li>
-                </ol>               
+        <div class="main-container">
+            <div class="flex-container">
+                <div class="menu item1">Home</div>
+                <div class="menu item2">About</div>
+                <div class="menu item3">Contacts</div>
             </div>
-            <!--
-            <div class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                </li>
+            <div class="image container">
+                <img id="image-banner" src="https://images.unsplash.com/photo-1517430868310-0bc91ef7d89a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
+                <div class="image-title">Amlan Sarkar</div>
+                <div class="image-subtitle">Phython Java Web-designing</div>
             </div>
-            -->
-        </div>
-        <!--
-        <div class="card" style="width:10rem">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">item 1</li>
-                <li class="list-group-item">item 2</li>
-                <li class="list-group-item">item 3</li>
-            </ul>
-           
-            
-            <img class="card-img-top" src="data:image/jpeg;base64,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">
-
-            <div class="card-body ">
-                <div class="card-title">HP Laptop</div>
-                <div class="card-subtitle">good for office work</div>
-                <p>Price:35000</p>
-                <a class="card-link">know more</a>
+            <div class="skill heading">
+                <div class="skill-title">My Skills</div>
             </div>
-           
-        </div>
-        -->
-        <!--
-        <div class="jumbotron">
-                <h1 class="display-4">This is a heading</h1>
-                <p class="lead">this is a description of the heading</p>
-                <a class="btn btn-success">click here</a>
-        </div>
-        -->
-        <!--
-        <div class="container">
-            
-            
-            <table class="table table-dark table-bordered">
-                <thead>
-                    <tr>
-                        <th>Model</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>Tata Altroz</td>
-                    <td>9.3 lakh</td>
-                </tr>
-                <tr>
-                    <td>hyundai i20</td>
-                    <td>8.9 lakh</td>
-                </tr>
-                <tr>
-                    <td>MS Baleno</td>
-                    <td>8.96 lakh</td>
-                </tr>
-            </table>
-            -->
-            <!--
-            <div class="image">
-                <img class="image-fluid" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
-
-            </div>
-            -->
-            <!--
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="newDiv">
-                        Left column
+            <div class="skill-container">
+                <div class="skill 1">
+                    <div class="image">
+                        <img id="image" src="https://cdn3.iconfinder.com/data/icons/social-media-logos-flat-colorful-1/2048/5352_-_HTML5-256.png">
                     </div>
+                    <div id="skill-text" class="text">HTML5</div>
                 </div>
-                <div class="col-md-6">
-                    <div class="newDiv">
-                        Right column
+                <div class="skill 1">
+                    <div class="image">
+                        <img id="image" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-256.png">
                     </div>
+                    <div id="skill-text" class="text">JAVA</div>
+                </div>
+                <div class="skill 1">
+                    <div class="image">
+                        <img id="image" src="https://cdn1.iconfinder.com/data/icons/web-development-hexagon/128/25-256.png">
+                    </div>
+                    <div id="skill-text" class="text">WEB-DESIGNING</div>
                 </div>
             </div>
-           
+            <div class="portfolio-heading">
+                <div class="portfolio-title">My work</div>
+            </div>
+            <hr>
+            <div class="portfolio-container">
+                <div class="portfolio-image">
+                    <img id="portimage" src="https://cdn.dribbble.com/users/937198/screenshots/7036184/media/6abbc8ebb0e9aca0bdbf1542a763f8c6.png">
+                </div>
+                <div class="portfolio-desc">
+                    <div class="portfolio-name">Finance App</div>
+                    <div class="portfolio-info">Helps you to invest</div>
+                </div>
+            </div>
+            <div class="portfolio-heading">
+                <div class="portfolio-title">Client Testimonials</div>
+            </div>
+            <hr>
+            <div class="testimonials">
+                <div class="client-name">
+                    Sundar Pichai
+                </div>
+                <div class="client-designation">
+                    CEO at Google
+                </div>
+                <div class="client-testimonials">
+                    Amlan Sarkar is a very hardworking and intelligent employee.
+                </div>
+            </div>
+            
         </div>
-         -->
     </body>
 </html>
